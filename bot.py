@@ -11,14 +11,16 @@ dp = Dispatcher()
 
 @dp.message(Command("start"))
 async def start(message: types.Message):
-    await message.answer("Я жив 🚀")
+    await message.answer("Привет! 🚀")
 
 @dp.message(Command("ping"))
 async def ping(message: types.Message):
     await message.answer("pong")
 
+
 async def main():
     await dp.start_polling(bot)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
